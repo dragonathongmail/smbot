@@ -20,7 +20,7 @@
     "setup": "npm install & typings install",
     "test": "gulp test",
     "watch": "nodemon --watch build/src build/src/index.js",
-    "postinstall": "gulp default"
+    "heroku-postbuild": "gulp"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
