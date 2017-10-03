@@ -2,6 +2,7 @@
   "name": "smbot",
   "scripts": {
   },
+  "repository": "https://github.com/dragonathongmail/smbot",
   "env": {
   },
   "formation": {

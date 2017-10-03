@@ -19,7 +19,8 @@
     "start": "gulp build; gulp tslint; node build/src/index.js",
     "setup": "npm install & typings install",
     "test": "gulp test",
-    "watch": "nodemon --watch build/src build/src/index.js"
+    "watch": "nodemon --watch build/src build/src/index.js",
+    "postinstall": "gulp default"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
