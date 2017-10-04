@@ -29,10 +29,10 @@ server.connection({
 // Add the route
 server.route({
     method: 'GET',
-    path:'/webhook',
+    path: '/webhook',
     handler: function (request, reply) {
         if (request.query['hub.mode'] === 'subscribe' &&
-            request.query['hub.verify_token'] === process.env.VERIFY_TOKEN) {
+            request.query['hub.verify_token'] === process.env.VERIFY_TOKEN||'my_super_secrect_token') {
             console.log("Validating webhook");
             reply(request.query['hub.challenge']).code(200);
         } else {
@@ -49,4 +49,5 @@ server.start((err) => {
         throw err;
     }
     console.log('Server running at:', server.info.uri);
+    console.log('VERIFY_TOKEN:' + process.env.VERIFY_TOKEN);
 });
