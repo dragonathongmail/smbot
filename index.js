@@ -37,7 +37,7 @@ app.get('/', function(req, res) {
 
 // Message processing
 app.post('/webhook', function (req, res) {
-    console.log(req.body);
+    console.log("POST:webhook");
     var data = req.body;
 
     // Make sure this is a page subscription
