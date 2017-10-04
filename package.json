@@ -11,5 +11,9 @@
   "dependencies": {
     "hapi": "^16.6.2",
     "hapi-require-https": "^2.1.0"
-  }
+  },
+  "keywords": [
+    "example",
+    "heroku"
+  ]
 }
